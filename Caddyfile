@@ -1,8 +1,6 @@
-:80 {
-	reverse_proxy wordpress:80
-}
-
-:443 {
-	tls internal
-	reverse_proxy wordpress:80
+domain.com www.domain.com {
+    # Optional: Add email for Let's Encrypt account recovery
+    tls email@gmail.com
+        
+    reverse_proxy wordpress:80
 }
